@@ -1,3 +1,4 @@
+import 'package:estante_app/app/router/app_router.dart';
 import 'package:estante_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -6,10 +7,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Estante',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: const Scaffold(),
+      routerConfig: AppRouter.router,
     );
   }
 }
